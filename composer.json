@@ -33,6 +33,7 @@
         "blackcube/active-record": "^1.0",
         "blackcube/dboard": "^1.0",
         "blackcube/dcore": "^1.0",
+        "blackcube/handler": "^1.0",
         "blackcube/injector": "^1.0",
         "blackcube/bridge-form-model": "^1.0",
         "guzzlehttp/guzzle": "^8.3",

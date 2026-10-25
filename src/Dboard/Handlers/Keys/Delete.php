@@ -12,7 +12,7 @@ namespace Blackcube\Mcp\Dboard\Handlers\Keys;
 
 use Blackcube\Dboard\Components\ActionModel;
 use Blackcube\Dboard\DboardConfig;
-use Blackcube\Dboard\Enums\OutputType;
+use Blackcube\Handler\OutputType;
 use Blackcube\Dboard\Handlers\Commons\AbstractAjaxHandler;
 use Blackcube\Mcp\Models\ApiKey;
 use Blackcube\Mcp\Services\ApiKeyService;
