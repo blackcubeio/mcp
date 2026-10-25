@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @copyright 2010-2026 Blackcube - Philippe Gaultier
+ * @license https://www.blackcube.io/license
+ * @link https://www.blackcube.io
+ */
+
+return [
+    'config-plugin' => [
+        'params' => 'common/params.php',
+        'params-console' => [
+            'console/params.php',
+        ],
+        'di' => 'common/di.php',
+        'bootstrap' => 'common/bootstrap.php',
+        'routes' => 'routes.php',
+    ],
+    'config-plugin-options' => [
+        'source-directory' => 'config',
+    ],
+];
