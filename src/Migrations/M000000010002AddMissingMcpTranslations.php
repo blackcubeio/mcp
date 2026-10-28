@@ -15,8 +15,8 @@ use Yiisoft\Db\Migration\MigrationInterface;
 use Yiisoft\Db\Query\Query;
 
 /**
- * Completes the 'mcp' translation category with the keys src/i18n/en/mcp.php
- * holds and the database does not yet, each with its translations from every
+ * Adds to the 'mcp' translation category the keys src/i18n/en/mcp.php holds
+ * and the database does not yet, each with its translations from every
  * locale. A base seeded by SeedMcpTranslations before those keys gets them; a
  * base seeded from now on already has them. Not revertible: the keys it adds
  * cannot be told apart later from the seeded ones.
@@ -25,7 +25,7 @@ use Yiisoft\Db\Query\Query;
  * @license https://www.blackcube.io/license
  * @link https://www.blackcube.io
  */
-class M000000010002CompleteMcpTranslations implements MigrationInterface
+class M000000010002AddMissingMcpTranslations implements MigrationInterface
 {
     private const CATEGORY = 'mcp';
 

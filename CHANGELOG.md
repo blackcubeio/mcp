@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - The `MCP key` translation, in the six languages.
-- `CompleteMcpTranslations`, a migration that adds to the `mcp` translation category the keys of the i18n files a base seeded earlier does not hold yet, with their translations.
+- `AddMissingMcpTranslations`, a migration that adds to the `mcp` translation category the keys of the i18n files a base seeded earlier does not hold yet, with their translations.
 
 ## [1.0.1] - 2026-10-27
 
