@@ -9,6 +9,7 @@ declare(strict_types=1);
  */
 
 use Blackcube\Bleet\Bleet;
+use Blackcube\Dboard\Widgets\Widgets;
 use Yiisoft\Html\Html;
 use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Translator\TranslatorInterface;
@@ -22,14 +23,12 @@ use Yiisoft\Translator\TranslatorInterface;
 
 
 ?>
-        <main class="flex-1 p-4 sm:p-6 lg:p-8">
-            <?php echo Bleet::cardHeader()
-                ->icon('key')
-                ->title($translator->translate('Key token', category: 'mcp'))
-                ->primary();
+        <main class="flex-1 px-4 py-8 sm:px-6 lg:px-8">
+            <?php echo Widgets::pageHeading($translator->translate('Key token', category: 'mcp'))
+                ->backTo($urlGenerator->generate('mcp.keys'), $translator->translate('MCP keys', category: 'mcp'))
+                ->render();
             ?>
-
-            <div class="bg-white rounded-b-lg shadow-lg p-4 space-y-4">
+            <div class="dboard-surface p-6 space-y-4">
                 <p class="text-warning-700 font-medium">
                     <?php echo Html::encode($translator->translate('Copy this token now — it is shown only once and cannot be recovered.', category: 'mcp')); ?>
                 </p>
@@ -38,7 +37,7 @@ use Yiisoft\Translator\TranslatorInterface;
                     <?php echo Bleet::a($translator->translate('Back to keys', category: 'mcp'), $urlGenerator->generate('mcp.keys'))
                         ->button()
                         ->icon('arrow-left')
-                        ->primary()
+                        ->accent()
                         ->render();
                     ?>
                 </div>

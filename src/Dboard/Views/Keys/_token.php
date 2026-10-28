@@ -25,7 +25,7 @@ use Yiisoft\Translator\TranslatorInterface;
         <?php echo Html::encode($translator->translate('Copy this token now — it is shown only once and cannot be recovered.', category: 'mcp')); ?>
     </p>
     <pre class="bg-secondary-100 rounded-md p-3 text-sm break-all"><?php echo Html::encode($token); ?></pre>
-    <div class="flex justify-end gap-4 pt-4 border-t border-gray-200">
+    <div class="flex justify-end gap-4 pt-4 border-t border-secondary-200">
         <?php echo Bleet::button($translator->translate('Close', category: 'mcp'))
             ->secondary()
             ->fieldData([
