@@ -25,6 +25,7 @@ return [
     'Key "{name}" rotated.' => 'Clave «{name}» renovada.',
     'Key "{name}" will be revoked. Its token stops working.' => 'La clave «{name}» será revocada. Su token deja de funcionar.',
     'Key token' => 'Token de la clave',
+    'MCP key' => 'Clave MCP',
     'MCP keys' => 'Claves MCP',
     'Name' => 'Nombre',
     'New MCP key' => 'Nueva clave MCP',
