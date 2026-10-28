@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 use Blackcube\Mcp\Dboard\Forms\KeyForm;
 use Blackcube\Bleet\Bleet;
+use Blackcube\Dboard\Widgets\Widgets;
 use Yiisoft\Html\Html;
 use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Translator\TranslatorInterface;
@@ -26,20 +27,18 @@ use Yiisoft\Translator\TranslatorInterface;
 
 
 ?>
-        <main class="flex-1 p-4 sm:p-6 lg:p-8">
+        <main class="flex-1 px-4 py-8 sm:px-6 lg:px-8">
+            <?php echo Widgets::pageHeading($translator->translate('New MCP key', category: 'mcp'))
+                ->backTo($urlGenerator->generate('mcp.keys'), $translator->translate('MCP keys', category: 'mcp'))
+                ->render();
+            ?>
             <?php echo Html::form()
                 ->post($urlGenerator->generate('mcp.keys.create'))
                 ->csrf($csrf)
                 ->noValidate()
                 ->open();
             ?>
-                <?php echo Bleet::cardHeader()
-                    ->left(Bleet::a()->url($urlGenerator->generate('mcp.keys'))->icon('chevron-left')->outline()->addClass('text-white', 'hover:text-white', '[&>svg]:size-6'))
-                    ->title($translator->translate('New MCP key', category: 'mcp'))
-                    ->primary();
-                ?>
-
-                <div class="bg-white rounded-b-lg shadow-lg p-4 space-y-6">
+                <div class="dboard-surface p-6 space-y-6">
                     <?php if (count($errors) > 0): ?>
                         <?php echo Bleet::alert()->content(implode(' — ', $errors))->danger()->render(); ?>
                     <?php endif; ?>
@@ -69,14 +68,15 @@ use Yiisoft\Translator\TranslatorInterface;
                     </div>
                 </div>
 
-                <div class="flex justify-end gap-4 mt-6">
+                <div class="dboard-actions">
                     <?php echo Bleet::a($translator->translate('Cancel', category: 'mcp'), $urlGenerator->generate('mcp.keys'))
                         ->button()
                         ->icon('x-mark')
                         ->ghost()
+                        ->secondary()
                         ->render();
                     ?>
-                    <?php echo Bleet::submitButton($translator->translate('Create key', category: 'mcp'))->icon('plus')->primary()->render(); ?>
+                    <?php echo Bleet::submitButton($translator->translate('Create key', category: 'mcp'))->icon('plus')->accent()->render(); ?>
                 </div>
             <?php echo Html::form()->close(); ?>
         </main>

@@ -25,6 +25,7 @@ return [
     'Key "{name}" rotated.' => 'Key "{name}" rotated.',
     'Key "{name}" will be revoked. Its token stops working.' => 'Key "{name}" will be revoked. Its token stops working.',
     'Key token' => 'Key token',
+    'MCP key' => 'MCP key',
     'MCP keys' => 'MCP keys',
     'Name' => 'Name',
     'New MCP key' => 'New MCP key',
